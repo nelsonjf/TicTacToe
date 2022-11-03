@@ -1,19 +1,17 @@
 body {
     background-color: #333;
-    color: white;
 }
 
-div {
-    border: 1px solid red;
-    height: 100px;
-    width: 100px;
-}
-
-.board {
+#board {
+    margin: auto;
+    background-color: black;
     display: grid;
     grid-template-columns: auto auto auto;
+    gap: 1.5em;
+    width: 500px;
+    height: 500px;
 }
 
-.sqr {
-
+button {
+    font-size: 4rem;
 }
