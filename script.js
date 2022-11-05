@@ -1,31 +1,40 @@
+// Universal Variables //
+
 let turnX = true
 let xSqr = []
 let oSqr = []
+let turnNum = 0
+
+// Basic game functionality //
 
 function playGame (num) {
     let square = document.getElementById(num)
     let status = document.getElementById('status')
+    let gameWon = false
 
-    if (square.className === "played") {
+    // Place X or O on a square based on who's turn it is
+    
+    if (gameWon === true) {
+
+    } else if (square.className === "played") {
         status.innerHTML = "This spot is taken!"
-
     } else if (turnX) {
         square.innerHTML = "X";
         status.innerHTML = "O's Turn"
         turnX = false
         square.className = "played"
         xSqr.push(num)
-        console.log("X's Spots = " + xSqr)
-
+        turnNum = turnNum + 1
     } else {
         square.innerHTML = "O";
         status.innerHTML = "X's Turn"
         turnX = true
         square.className = "played"
         oSqr.push(num)
-        console.log("O's Spots = " + oSqr)
+        turnNum = turnNum + 1
     }
 
+    // Check for a winner every turn    
     if (
         xSqr.includes(1)&&xSqr.includes(2)&&xSqr.includes(3)||
         xSqr.includes(4)&&xSqr.includes(5)&&xSqr.includes(6)||
@@ -37,7 +46,10 @@ function playGame (num) {
         xSqr.includes(3)&&xSqr.includes(6)&&xSqr.includes(9)
     ) {
         status.innerHTML = "X Wins!"
-    } else if (
+        gameWon = true
+    }
+    
+    if (
         oSqr.includes(1)&&oSqr.includes(2)&&oSqr.includes(3)||
         oSqr.includes(4)&&oSqr.includes(5)&&oSqr.includes(6)||
         oSqr.includes(7)&&oSqr.includes(8)&&oSqr.includes(9)||
@@ -48,7 +60,11 @@ function playGame (num) {
         oSqr.includes(3)&&oSqr.includes(6)&&oSqr.includes(9)
     ) {
         status.innerHTML = "O Wins!"
+        gameWon = true
     }
 
+    // Tie check
+    if (turnNum === 9) {
+        status.innerHTML = "Tie!"
+    }
 }
-
