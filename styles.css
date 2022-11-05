@@ -18,18 +18,28 @@ body {
     font-size: 7rem;
 }
 
-.menu {
-    margin: auto;
-    height: 200px;
-    width: 100px;
-}
-
 #status {
     color: lightgray;
     width: 300px;
-    height: 200px;
+    height: 50px;
+    padding: 2rem;
     margin: auto;
+    justify-content: center;
     text-align: center;
-    padding: 1rem;
+
     font-family: cursive;
+}
+
+#newGame {
+    margin: auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newGame {
+    margin: auto;
+    width: 200px;
+    height: 50px;
 }

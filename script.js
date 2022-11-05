@@ -4,18 +4,18 @@ let turnX = true
 let xSqr = []
 let oSqr = []
 let turnNum = 0
+let gameWon = false
 
 // Basic game functionality //
 
 function playGame (num) {
     let square = document.getElementById(num)
     let status = document.getElementById('status')
-    let gameWon = false
 
-    // Place X or O on a square based on who's turn it is
-    
+
+    // Place X or O on a square based on who's turn it is //
     if (gameWon === true) {
-
+        return    
     } else if (square.className === "played") {
         status.innerHTML = "This spot is taken!"
     } else if (turnX) {
@@ -34,7 +34,7 @@ function playGame (num) {
         turnNum = turnNum + 1
     }
 
-    // Check for a winner every turn    
+    // Check for a winner every turn //  
     if (
         xSqr.includes(1)&&xSqr.includes(2)&&xSqr.includes(3)||
         xSqr.includes(4)&&xSqr.includes(5)&&xSqr.includes(6)||
@@ -63,7 +63,7 @@ function playGame (num) {
         gameWon = true
     }
 
-    // Tie check
+    // Tie check //
     if (turnNum === 9) {
         status.innerHTML = "Tie!"
     }
