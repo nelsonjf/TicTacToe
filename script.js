@@ -69,6 +69,8 @@ function playGame (num) {
     }
 }
 
+
+// "Restarts" the game //
 function newGame () {
 window.location.reload()
 }
