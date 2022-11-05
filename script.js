@@ -1,4 +1,4 @@
-// Universal Variables //
+// Global Variables //
 
 let turnX = true
 let xSqr = []
@@ -67,4 +67,8 @@ function playGame (num) {
     if (turnNum === 9) {
         status.innerHTML = "Tie!"
     }
+}
+
+function newGame () {
+window.location.reload()
 }

@@ -26,7 +26,6 @@ body {
     margin: auto;
     justify-content: center;
     text-align: center;
-
     font-family: cursive;
 }
 
@@ -40,6 +39,19 @@ body {
 
 .newGame {
     margin: auto;
-    width: 200px;
+    width: 150px;
     height: 50px;
+    font-size: 14px;
+}
+
+#aboutGame {
+    color: lightgray;
+    font-family: cursive;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    margin: auto;
 }
