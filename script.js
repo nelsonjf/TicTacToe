@@ -24,14 +24,14 @@ function playGame (num) {
         turnX = false
         square.className = "played"
         xSqr.push(num)
-        turnNum = turnNum + 1
+        turnNum += 1
     } else {
         square.innerHTML = "O";
         status.innerHTML = "X's Turn"
         turnX = true
         square.className = "played"
         oSqr.push(num)
-        turnNum = turnNum + 1
+        turnNum +=1
     }
 
     // Check for a winner every turn //  
@@ -66,7 +66,7 @@ function playGame (num) {
     }
 
     // Tie check //
-    if (turnNum === 9) {
+    if (turnNum === 9 && gameWon === false) {
         status.innerHTML = "Tie!"
     }
 }
