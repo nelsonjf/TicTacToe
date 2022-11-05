@@ -46,6 +46,7 @@ function playGame (num) {
         xSqr.includes(3)&&xSqr.includes(6)&&xSqr.includes(9)
     ) {
         status.innerHTML = "X Wins!"
+        status.style.color = "green"
         gameWon = true
     }
     
@@ -60,6 +61,7 @@ function playGame (num) {
         oSqr.includes(3)&&oSqr.includes(6)&&oSqr.includes(9)
     ) {
         status.innerHTML = "O Wins!"
+        status.style.color = "green"
         gameWon = true
     }
 
