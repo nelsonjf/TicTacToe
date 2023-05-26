@@ -1,0 +1,55 @@
+body {
+  background-color: #333;
+}
+
+#board {
+  margin: auto;
+  background-color: #000;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  height: 500px;
+  width: 500px;
+}
+#board * {
+  height: 150px;
+  width: 150px;
+  font-size: 7rem;
+}
+
+#status {
+  color: #dbdbdb;
+  width: 300px;
+  height: 50px;
+  padding: 2rem;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: cursive;
+}
+
+#newGame {
+  margin: auto;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#newGame .newGame {
+  margin: auto;
+  width: 150px;
+  height: 50px;
+  font-size: 14px;
+}
+
+#aboutGame {
+  color: #dbdbdb;
+  font-family: cursive;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+}
